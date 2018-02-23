@@ -40,6 +40,9 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            cm.createCache(io.github.jhipster.application.domain.Workplace.class.getName(), jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Workplace.class.getName() + ".workplaces", jcacheConfiguration);
+            cm.createCache(io.github.jhipster.application.domain.Workplace.class.getName() + ".resourceIds", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

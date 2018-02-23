@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Workplace.
+    -->
+    <changeSet id="20180223141153-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="workplaces_id"
+                                 baseTableName="workplace_workplace"
+                                 constraintName="workplace_work_workplaces_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="workplace"/>
+        <addForeignKeyConstraint baseColumnNames="workplaces_id"
+                                 baseTableName="workplace_workplace"
+                                 constraintName="workplace_work_workplaces_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="workplace"/>
+        
+    </changeSet>
+</databaseChangeLog>
