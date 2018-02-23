@@ -1,0 +1,41 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "resourceId",
+            "relationshipName": "workplace",
+            "otherEntityName": "workplace",
+            "otherEntityField": "resourceId",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "resourceId",
+            "otherEntityName": "workplace",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "workplace"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "resourceId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "workplaceName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180223141153",
+    "entityTableName": "workplace",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "jhipsterSampleApplication"
+}
